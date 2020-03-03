@@ -1,7 +1,7 @@
 class Api::G1::GroomersController < ApplicationController
     def index
         @groomers = Groomer.all 
-        render @json: @groomers
+        render json: @groomers
     end
 
     # def create
@@ -15,7 +15,7 @@ class Api::G1::GroomersController < ApplicationController
 
     def show 
         @groomer = Groomer.find(params[:id])
-        renser @json: @groomer
+        renser json: @groomer
     end
 
     def destroy
